@@ -1,0 +1,14 @@
+#!/bin/bash
+# Lets see machine specifications and environments
+df -h
+free -h
+nproc
+cat /etc/os*
+env
+
+url=https://server.hemantsachdeva.workers.dev/ci/evo_ccache.tar.gz  # Where cccahe is located, use your ones, from where you want to download evo_ccache!
+
+cd /tmp # Where to download cccahe
+time aria2c $url -x16 -s50
+time tar xf evo_ccache.tar.gz  # Extract ccache so ci can use it
+rm -rf evo_ccache.tar.gz # Remove unnecessary downloaded file, it will speed up the upload evo_ccache process
