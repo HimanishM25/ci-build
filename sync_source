@@ -25,3 +25,6 @@ git clone $VT_LINK --single-branch -b elle --depth=1 vendor/$BRAND/$CODENAME
 git clone $KT_LINK --single-branch -b elle --depth=1 kernel/$BRAND/$CODENAME
 git clone $PT_LINK --single-branch -b elle --depth=1 device/$BRAND/$CODENAME-images
 git clone https://github.com/HemantSachdeva/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-proton
+rm device/xiaomi/laurel_sprout/vendorsetup.sh # Yeah I will take care of that here myself
+rm -rf vendor/qcom/opensource/commonsys-intf/display && git clone https://github.com/HemantSachdeva/vendor_qcom_opensource_display-commonsys-intf vendor/qcom/opensource/commonsys-intf/display &&
+rm -rf vendor/qcom/opensource/wfd-commonsys && git clone https://github.com/HemantSachdeva/vendor_qcom_opensource_wfd-commonsys vendor/qcom/opensource/wfd-commonsys
