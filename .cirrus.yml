@@ -1,7 +1,6 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    RCLONE_CONFIG: "ENCRYPTED[8dd6901901556b448359f2376e5ceb92cf8c1ed666d3a84159a07c52cee2def28e8260398d635f048d387e91108a3175]"
     CHAT_ID: "ENCRYPTED[c305ce2b86b328db7621c0b901e678f54138cb2fcded0f560dfc2d5a9428ed1b4a0b913abd3d9db18264293b86d98abe]"
     API_BOT: "ENCRYPTED[5fee399fe05f0dc1f797c4146365a77dbac93d5526a9071edddb007e4da26436718b04d7b2ebe042e4684a6766bf9aec]"
 
@@ -16,9 +15,6 @@ task:
       - pwd
       - git clone https://github.com/HemantSachdeva/ci-build ~/BobTheBuilder
       - chmod -R +x ~/BobTheBuilder
-    configure_rclone_script:
-      - mkdir -p ~/.config/rclone
-      - echo "$RCLONE_CONFIG" > ~/.config/rclone/rclone.conf
     sync_script:
       - cd ~/BobTheBuilder && ./sync_source
     download_ccache_script:

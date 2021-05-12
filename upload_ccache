@@ -8,5 +8,3 @@ com() {
 }
 
 time com ccache 1 # Compression level 1, its enough
-
-time rclone copy ccache.tar.gz drive:ccache/ci/
