@@ -1,19 +1,19 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    BUILD_HOSTNAME: "cirrus-ci.org"
+    
 
 task:
   name: HimanishM25
   timeout_in: 4h
   persistent_worker:
     labels:
-      name: AX61-2
+      name: pwh1
     isolation:
       container:
-        image: apon77/aosp:cirrus
-        cpu: 24
-        memory: 120G
+        image: x
+        cpu: 8
+        memory: 24G
         volumes:
           - /home/cirrus/roms:/home/cirrus/roms
           - /home/cirrus/ccache:/home/cirrus/ccache
