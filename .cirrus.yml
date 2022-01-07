@@ -13,7 +13,7 @@ task:
         memory: 24G
     clone_repo_script:
       - pwd
-      - git clone https://github.com/HemantSachdeva/ci-build ~/BobTheBuilder
+      - git clone https://github.com/HimanishM25/ci-build ~/BobTheBuilder
       - chmod -R +x ~/BobTheBuilder
     sync_script:
       - cd ~/BobTheBuilder && ./sync_source
