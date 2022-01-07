@@ -1,8 +1,7 @@
 env: # Environt variable to pass to all tasks
     CIRRUS_CLONE_DEPTH: 1 # No need to clone with whole history
     CIRRUS_WORKING_DIR: "/tmp/ci" # Where to clone repo
-    CHAT_ID: "ENCRYPTED[c305ce2b86b328db7621c0b901e678f54138cb2fcded0f560dfc2d5a9428ed1b4a0b913abd3d9db18264293b86d98abe]"
-    API_BOT: "ENCRYPTED[5fee399fe05f0dc1f797c4146365a77dbac93d5526a9071edddb007e4da26436718b04d7b2ebe042e4684a6766bf9aec]"
+    BUILD_HOSTNAME: "cirrus-ci.org"
 
 task:
   name: HimanishM25
